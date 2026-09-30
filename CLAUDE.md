@@ -1,4 +1,4 @@
-# Second Brain — anh Luận (Vua Bảo Hộ)
+# Second Brain - anh Luận (Vua Bảo Hộ)
 
 Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 
@@ -9,7 +9,7 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 ## Công ty
 - Ngành: đồ bảo hộ lao động cao cấp và đồng phục doanh nghiệp. Website: vuabaoho.com.
 - Trụ sở chính: Nam Định. Chi nhánh: Nghệ An.
-- Hai mùa hàng: mùa hè bán áo điều hòa / áo quạt (cao điểm tháng 3–8), mùa đông bán áo sưởi / áo giữ ấm.
+- Hai mùa hàng: mùa hè bán áo điều hòa / áo quạt (cao điểm tháng 3-8), mùa đông bán áo sưởi / áo giữ ấm.
 - Kênh bán: cửa hàng, Facebook, TikTok, Shopee, website, Zalo, hotline.
 - Thế mạnh và trọng tâm phát triển: khách hàng doanh nghiệp (B2B).
 - Năm 2026 lần đầu lập vị trí cửa hàng trưởng chính thức; đang cơ cấu lại lương và quy trình.
