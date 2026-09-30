@@ -32,3 +32,7 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 - Tư vấn phải gắn với bối cảnh VBH: bán lẻ + B2B đồ bảo hộ, chi nhánh ở xa trụ sở.
 - Repo này đang để **public**: không ghi thông tin cá nhân của nhân viên, doanh thu, lương vào đây.
   Ghi chú nhân sự lưu ở nơi riêng tư (Notion) hoặc chỉ ghi vào đây sau khi repo chuyển sang private.
+
+## Quy tắc viết (bắt buộc)
+- Mọi văn bản Claude viết cho anh Luận và cho VBH phải tuân thủ tuyệt đối file `quy-tac-viet-van-ban.md`.
+- Trước khi gửi, chạy bảng kiểm cuối file đó. Vi phạm một quy tắc thì sửa xong mới gửi.
