@@ -36,3 +36,4 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 ## Quy tắc viết (bắt buộc)
 - Mọi văn bản Claude viết cho anh Luận và cho VBH phải tuân thủ tuyệt đối file `quy-tac-viet-van-ban.md`.
 - Trước khi gửi, chạy bảng kiểm cuối file đó. Vi phạm một quy tắc thì sửa xong mới gửi.
+- Khi anh nhờ kiểm tra, chấm hoặc duyệt một văn bản (bài SEO, bài đăng, báo giá, nội quy...), dùng skill `kiem-tra-van-ban` (`.claude/skills/kiem-tra-van-ban/SKILL.md`) và làm đủ các bước trong đó.
