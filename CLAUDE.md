@@ -15,6 +15,17 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 - Năm 2026 lần đầu lập vị trí cửa hàng trưởng chính thức; đang cơ cấu lại lương và quy trình.
 - Thang bậc nhân viên: Cấp độ 1 → Cấp độ 2 → Cấp độ 3 → CHT tập sự → CHT chuẩn.
 
+## Liên hệ công khai (dùng cho bài viết, website)
+- Hotline toàn quốc: 1900.3385
+- Cửa hàng Nam Định: Số 202 Điện Biên, Phường Nam Định, tỉnh Ninh Bình — 0911.377.997
+- Cửa hàng Nghệ An: Số 3 Phan Đình Phùng, Phường Thành Vinh, tỉnh Nghệ An — 0941.60.8118
+
+## Website (Sapo)
+- Quản trị: vuabaoho.mysapo.net. Mã API lưu trong Network secrets của môi trường, không ghi vào repo.
+- Blog chính "Thông tin tiêu dùng" (alias tin-tuc), hơn 700 bài. Trước khi viết bài mới, kiểm tra bài cũ cùng từ khóa để tránh tự cạnh tranh.
+- Sản phẩm quần áo bảo hộ đang tạo mỗi size là một sản phẩm và đều ẩn trên web; danh mục "Quần áo bảo hộ lao động" (alias quan-ao-bao-ho-lao-dong-1) đang trống.
+- Bài viết mới đăng ở chế độ ẩn để anh duyệt trước.
+
 ## Chữ viết tắt
 - **CHT = Cửa hàng trưởng** (không phải chỉ huy trưởng)
 - VBH = Vua Bảo Hộ
