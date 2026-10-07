@@ -25,6 +25,9 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 - Blog chính "Thông tin tiêu dùng" (alias tin-tuc), hơn 700 bài. Trước khi viết bài mới, kiểm tra bài cũ cùng từ khóa để tránh tự cạnh tranh.
 - Sản phẩm quần áo bảo hộ đang tạo mỗi size là một sản phẩm và đều ẩn trên web; danh mục "Quần áo bảo hộ lao động" (alias quan-ao-bao-ho-lao-dong-1) đang trống.
 - Bài viết mới đăng ở chế độ ẩn để anh duyệt trước.
+- Đăng bài qua API: hiện bài bằng cách đặt `published_on` (trường `published` không có tác dụng); ảnh đại diện gửi bằng `image.base64`, alt ảnh nằm ở trường `alt_image`.
+- Giao diện không hiện ảnh đại diện trong trang bài viết; ảnh giữa bài cần quyền Tệp tin/Files (API files.json đang báo 403).
+- Giao diện đã tự sinh schema BreadcrumbList và NewsArticle; schema NewsArticle bị lỗi JSON (dấu phẩy thừa) trên mọi bài, cần sửa trong theme.
 
 ## Chữ viết tắt
 - **CHT = Cửa hàng trưởng** (không phải chỉ huy trưởng)
