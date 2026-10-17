@@ -30,6 +30,7 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 
 ## Đăng bài SEO tự động
 - Quy trình: skill `.claude/skills/dang-bai-seo`; công cụ `seo/scripts/sapo.py`; chiến lược `seo/chien-luoc.md`; kế hoạch `seo/ke-hoach-noi-dung.md`; tiêu chí duyệt `seo/tieu-chi-duyet-bai.md`.
+- Chiến lược tổng 6 tháng (19/10/2026 → 18/04/2027, 4 ngành: áo điều hòa, đồ bảo hộ cho doanh nghiệp, giày bảo hộ, địa phương): `seo/chien-luoc-6-thang.md`. Sổ từ khóa (mỗi từ khóa một trang): `seo/tu-khoa-muc-tieu.md`. Mẫu SEO khi mở cửa hàng tỉnh mới: `seo/dia-phuong-mau.md`.
 - Lịch tự động chạy 7h50 sáng mỗi ngày (giờ Việt Nam), mỗi lần một bài, gắn tag `seo-tu-dong`.
 - 14 bài tự động đầu tiên để ẩn chờ anh duyệt, từ bài thứ 15 đăng thẳng.
 - ChatGPT duyệt bài qua OpenAI API (Network secret cho api.openai.com). Chưa có mã thì Claude duyệt thay và ghi rõ trong báo cáo.

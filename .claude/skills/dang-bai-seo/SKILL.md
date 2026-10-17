@@ -7,7 +7,7 @@ description: Viết và đăng một bài blog chuẩn SEO lên vuabaoho.com (Sa
 
 Mỗi lần chạy: **đúng một bài**, chất lượng hơn số lượng. Làm lần lượt từng bước. Không bỏ bước duyệt và bước kiểm tra.
 
-Đọc trước: `CLAUDE.md` (thông tin doanh nghiệp, quy tắc), `seo/chien-luoc.md`, `seo/ke-hoach-noi-dung.md`, `seo/tieu-chi-duyet-bai.md`.
+Đọc trước: `CLAUDE.md` (thông tin doanh nghiệp, quy tắc), `seo/chien-luoc.md`, `seo/ke-hoach-noi-dung.md`, `seo/tu-khoa-muc-tieu.md`, `seo/tieu-chi-duyet-bai.md`.
 
 Công cụ: `python3 seo/scripts/sapo.py <lệnh>` (chạy `--help` để xem lệnh). Mã API Sapo do proxy tự gắn, không cần và không được ghi mã vào đâu. Làm việc trong một thư mục tạm, ví dụ `W=$(mktemp -d)`; không ghi file bài viết vào repo, không commit.
 
@@ -21,6 +21,7 @@ Công cụ: `python3 seo/scripts/sapo.py <lệnh>` (chạy `--help` để xem l�
 
 1. Đi từ trên xuống bảng trong `seo/ke-hoach-noi-dung.md`. Với mỗi dòng chạy `sapo.py alias-exists <đường dẫn>`: "CÓ" thì bỏ qua; "CHƯA CÓ" thì chọn dòng đó.
 2. Chống trùng: `sapo.py search-articles <2–4 từ khóa của chủ đề>`. Nếu có bài cũ cùng ý định tìm kiếm (người tìm sẽ thấy hai bài trả lời cùng một câu hỏi), đổi góc viết cho khác hẳn và ghi lý do vào báo cáo. Nếu không đổi được, bỏ qua chủ đề này, ghi vào báo cáo, chọn dòng kế tiếp.
+   Tra thêm `seo/tu-khoa-muc-tieu.md`: từ khóa đã giao cho trang danh mục, trang tỉnh hay trang doanh nghiệp thì bài không được nhắm vào từ khóa đó, chỉ đặt link về trang ấy (khi trang đã hiện).
 3. Hết bảng: tự đề xuất một chủ đề theo `seo/chien-luoc.md` (đúng mùa, chưa có bài, ưu tiên nhóm A và D), đặt đường dẫn không dấu, gạch nối, dưới 70 ký tự. Ghi "ĐÃ HẾT KẾ HOẠCH" vào báo cáo.
 
 ## Bước 2. Thu thập dữ liệu (không bịa)
@@ -57,7 +58,7 @@ Khung bài, khoảng 1.200–1.800 chữ:
 1. Mở bài 2–4 câu: trả lời thẳng câu hỏi chính, có từ khóa chính trong câu đầu hoặc câu thứ hai. Ngay sau là ảnh đầu tiên.
 2. 4–7 mục `<h2>`, có `<h3>` khi cần. Mỗi mục bắt đầu bằng một câu trả lời ngắn rồi mới giải thích. Đoạn 2–4 câu. Dùng `<ul>`/`<ol>`, và bảng khi so sánh: bọc bảng trong `<div style="overflow-x:auto">…</div>`.
 3. Bối cảnh Việt Nam và VBH: công trường, nhà xưởng, khu công nghiệp, mùa rét miền Bắc, nắng nóng miền Trung; khách doanh nghiệp và khách lẻ.
-4. 2–4 liên kết nội bộ dạng `<a href="/duong-dan">chữ mô tả</a>`, chỉ tới trang đang hiện. Kiểm tra từng link: `curl -s -o /dev/null -w "%{http_code}" https://vuabaoho.com/duong-dan` phải ra 200.
+4. 2–4 liên kết nội bộ dạng `<a href="/duong-dan">chữ mô tả</a>`, chỉ tới trang đang hiện, trong đó có trang đích của nhóm (bảng trong `seo/chien-luoc.md`) nếu trang đó đã hiện. Kiểm tra từng link: `curl -s -o /dev/null -w "%{http_code}" https://vuabaoho.com/duong-dan` phải ra 200.
 5. Mục `<h2>Câu hỏi thường gặp</h2>` gồm 4–6 câu: mỗi câu là `<h3>` câu hỏi, ngay sau là một `<p>` trả lời 1–3 câu.
 6. Mục `<h2>` cuối: liên hệ, ghi đúng thông tin doanh nghiệp trong `CLAUDE.md` (hotline 1900.3385, hai cửa hàng kèm số điện thoại, website).
 7. Chạy `sapo.py faq-schema $W/bai.html` để gắn schema FAQPage vào cuối bài.
