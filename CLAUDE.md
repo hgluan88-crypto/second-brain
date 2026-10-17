@@ -12,6 +12,8 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 - Hai mùa hàng: mùa hè bán áo điều hòa / áo quạt (cao điểm tháng 3–8), mùa đông bán áo sưởi / áo giữ ấm.
 - Kênh bán: cửa hàng, Facebook, TikTok, Shopee, website, Zalo, hotline.
 - Thế mạnh và trọng tâm phát triển: khách hàng doanh nghiệp (B2B).
+- Định vị: Vua Bảo Hộ là thương hiệu chuyên phân phối các dòng sản phẩm chính hãng. Yamako (áo điều hòa, áo sưởi) là một hãng được phân phối tại Vua Bảo Hộ; web thương hiệu yamako.vn cũng là của anh Luận.
+- Nhận in logo lên áo theo yêu cầu của khách (đồng phục, áo điều hòa).
 - Năm 2026 lần đầu lập vị trí cửa hàng trưởng chính thức; đang cơ cấu lại lương và quy trình.
 - Thang bậc nhân viên: Cấp độ 1 → Cấp độ 2 → Cấp độ 3 → CHT tập sự → CHT chuẩn.
 

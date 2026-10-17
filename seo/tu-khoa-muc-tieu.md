@@ -15,10 +15,11 @@ Ghi chú:
 |---|---|---|---|---|
 | áo điều hòa, áo điều hoà, áo quạt điều hòa, áo có quạt | Mua | /ao-dieu-hoa | Có – cần tối ưu | P1 |
 | áo điều hòa chính hãng, áo điều hòa Nhật Bản | Mua | /ao-dieu-hoa | Có – cần tối ưu | P1 |
-| áo điều hòa Yamako | Mua, thương hiệu | /ao-dieu-hoa (chờ anh trả lời về yamako.vn) | Có – cần tối ưu | P1 |
+| áo điều hòa Yamako, áo sưởi Yamako, tên từng mẫu Yamako | Mua, thương hiệu | **yamako.vn** giữ vị trí chính; vuabaoho.com có trang /yamako (nhà phân phối) để chiếm thêm một chỗ | /yamako chưa có | P1 |
 | áo điều hòa cho công nhân | Mua, doanh nghiệp | /ao-dieu-hoa-cho-doanh-nghiep | Chưa có | P1 |
 | áo điều hòa cho công ty, áo điều hòa số lượng lớn, áo điều hòa giá sỉ | Mua, doanh nghiệp | /ao-dieu-hoa-cho-doanh-nghiep | Chưa có | P1 |
-| áo điều hòa in logo | Mua, doanh nghiệp | /ao-dieu-hoa-cho-doanh-nghiep (chỉ khi VBH có dịch vụ này) | Chưa có | P2 |
+| áo điều hòa in logo, in logo lên áo điều hòa | Mua, doanh nghiệp | /ao-dieu-hoa-cho-doanh-nghiep (anh đã xác nhận có in logo theo yêu cầu) | Chưa có | P1 |
+| mua áo điều hòa ở Hà Nội | Mua, địa phương | yamako.vn (Vua Bảo Hộ không có cửa hàng ở Hà Nội); bài cũ về Hà Nội trên vuabaoho.com là ứng viên chuyển sang yamako.vn | — | P3 |
 | giá áo điều hòa, bảng giá áo điều hòa | So sánh giá | /bang-gia-ao-dieu-hoa | Chưa có (gộp 32 bài giá cũ về đây) | P1 |
 | áo điều hòa loại nào tốt, áo điều hòa hãng nào tốt | So sánh | Bài so sánh duy nhất (chọn 1 bài cũ tốt nhất làm bài chính) | Có – cần gộp | P2 |
 | pin áo điều hòa, quạt áo điều hòa, phụ kiện áo điều hòa | Mua | /phu-kien-ao-quat-dieu-hoa | Có – cần tối ưu | P2 |

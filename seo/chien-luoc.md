@@ -9,7 +9,8 @@ Cập nhật: 17/10/2026. Lịch tự động đọc file này mỗi lần viế
    2. **Đồ bảo hộ lao động** đủ loại (quần áo, giày, mũ, găng tay, ủng…) cho doanh nghiệp.
    3. **Giày bảo hộ** (có cửa hàng thật để thử).
    4. **Đồ bảo hộ tại địa phương**: Nam Định (nay thuộc tỉnh Ninh Bình), Nghệ An, và các tỉnh sẽ mở cửa hàng.
-2. Mỗi bài dẫn người đọc tới một hành động: gọi hotline 1900.3385, ghé cửa hàng Nam Định hoặc Nghệ An, gửi yêu cầu báo giá, hoặc xem sản phẩm đang bán trên web.
+2. Định vị: Vua Bảo Hộ là nhà phân phối các dòng đồ bảo hộ chính hãng; Yamako là một thương hiệu Vua Bảo Hộ phân phối. yamako.vn là web thương hiệu Yamako, cùng chủ. Trên vuabaoho.com, lời kêu gọi luôn là hotline và cửa hàng Vua Bảo Hộ; chỉ link sang yamako.vn khi nói về thông tin hãng (bảo hành, thông số gốc), không viết "mua tại yamako.vn". Chỉ ghi "nhà phân phối chính hãng / đại lý ủy quyền" cho hãng đã được xác nhận (hiện là Yamako).
+3. Mỗi bài dẫn người đọc tới một hành động: gọi hotline 1900.3385, ghé cửa hàng Nam Định hoặc Nghệ An, gửi yêu cầu báo giá, hoặc xem sản phẩm đang bán trên web.
 
 ## Hiện trạng (tháng 10/2026)
 
@@ -36,7 +37,7 @@ Cập nhật: 17/10/2026. Lịch tự động đọc file này mỗi lần viế
 
 | Nhóm | Tỷ trọng | Nội dung |
 |---|---|---|
-| A. Doanh nghiệp và an toàn lao động | khoảng 35% | Thông tư 25/2022, danh sách đồ bảo hộ theo ngành (xây dựng, may mặc, cơ khí, điện tử, kho vận, thực phẩm), quy trình và biên bản cấp phát, chi phí, chọn nhà cung cấp, đồng phục bảo hộ in logo. Áo điều hòa góc doanh nghiệp (chống nóng cho người lao động, chi phí, quản lý pin). |
+| A. Doanh nghiệp và an toàn lao động | khoảng 35% | Thông tư 25/2022, danh sách đồ bảo hộ theo ngành (xây dựng, may mặc, cơ khí, điện tử, kho vận, thực phẩm), quy trình và biên bản cấp phát, chi phí, chọn nhà cung cấp, đồng phục bảo hộ và áo điều hòa in logo theo yêu cầu (Vua Bảo Hộ có nhận in, không ghi số lượng tối thiểu hay thời gian làm khi chưa có xác nhận). Áo điều hòa góc doanh nghiệp (chống nóng cho người lao động, chi phí, quản lý pin). |
 | C. Giày và thiết bị bảo hộ | khoảng 35% | Giày là trọng tâm (ký hiệu, size, mũi composite/thép, ESD, giày nữ, so sánh hãng, đặt số lượng cho công ty), sau đó kính, chống ồn, mũ. Găng tay, ủng chỉ viết khi có sản phẩm hiện để dẫn link. |
 | B. Theo mùa | khoảng 20% | Tháng 10–1: áo sưởi, áo giữ nhiệt, chống rét cho công nhân, quà Tết doanh nghiệp. Từ cuối tháng 11: áo điều hòa **chỉ góc doanh nghiệp, góc mới** (đã có 539 bài). |
 | D. Địa phương | khoảng 10% | Bài thông tin cho doanh nghiệp trong tỉnh, ví dụ đồ bảo hộ cho khu công nghiệp Nghệ An, Nam Định. Không viết bài kiểu "cửa hàng … tại …" (đã là trang riêng). |

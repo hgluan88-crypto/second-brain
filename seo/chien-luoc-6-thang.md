@@ -33,7 +33,7 @@ Các con số mục tiêu trên sẽ chốt lại ở **tuần 2**, khi có số
 | 1 | **Trang bán hàng chính (trang danh mục) gần như trống chữ** | Trang `/ao-dieu-hoa` có tiêu đề "Áo điều hoà", mô tả "Áo điều hoà", không có đoạn giới thiệu nào. Các danh mục khác cũng không có mô tả SEO | Google không có gì để hiểu trang này đáng xếp trên đối thủ. Từ khóa mua hàng ("áo điều hòa", "giày bảo hộ") Google ưu tiên trang danh mục, không ưu tiên bài blog |
 | 2 | **Không có danh mục "Giày bảo hộ lao động"** | `/giay-bao-ho` và `/giay-bao-ho-lao-dong` báo lỗi 404. Giày chỉ nằm theo hãng (`/safety-jogger`, `/fiv-out`), trong đó `/fiv-out` lẫn cả giày thể thao | Không có trang nào để lên top cho từ khóa lớn nhất của ngành 3 |
 | 3 | **96% sản phẩm đang ẩn** | 2.966 sản phẩm, chỉ 124 hiển thị. Ẩn 429 quần áo bảo hộ, 372 giày bảo hộ. Danh mục găng tay, mũ bảo hộ, quần áo bảo hộ hiện **0 sản phẩm**; ủng chỉ 1 | Ngành 2 không có gì để bán trên web. Nguyên nhân: mỗi size đang là một sản phẩm riêng |
-| 4 | **Blog tự cạnh tranh với chính mình** | 539/728 bài là áo điều hòa: 33 bài kiểu "mua ở đâu", 32 bài về giá, 46 bài về pin, 61 bài về cách dùng. Riêng "mua áo điều hòa tại Nam Định" có ít nhất 5 bài | Google không biết trang nào là trang chính, nên chia nhỏ thứ hạng cho nhiều bài, không bài nào lên top. Vài bài còn nhắc "Yamako.vn" thay vì Vua Bảo Hộ |
+| 4 | **Blog tự cạnh tranh với chính mình** | 539/728 bài là áo điều hòa: 33 bài kiểu "mua ở đâu", 32 bài về giá, 46 bài về pin, 61 bài về cách dùng. Riêng "mua áo điều hòa tại Nam Định" có ít nhất 5 bài | Google không biết trang nào là trang chính, nên chia nhỏ thứ hạng cho nhiều bài, không bài nào lên top. Thêm nữa: 341/540 bài còn sót mã định dạng khi chép từ ChatGPT (393 bài đăng trong năm 2025), 237 bài nhắc yamako.vn và 137 bài đặt link sang yamako.vn. Google không phạt vì dùng AI, nhưng hạ những web có nhiều bài na ná nhau, ít giá trị riêng |
 | 5 | **Lỗi kỹ thuật trên mọi trang** | Dòng chữ lỗi "Lỗi liquid: The input string '2.333…' was not in a correct format" hiện trong mã trang ở mọi trang đã kiểm tra. Trang sản phẩm **không có schema Product** (giá, còn hàng). Schema NewsArticle của bài viết lỗi JSON | Google không hiện giá, tình trạng hàng trên kết quả tìm kiếm; trang bị đánh giá kém chất lượng |
 | 6 | **Thông tin doanh nghiệp không thống nhất** | Chân trang ghi "Công ty Cổ Phần Vua Bảo Hộ", địa chỉ cũ "202 Điện Biên, P.Cửa Bắc, TP.Nam Định", **không có cửa hàng Nghệ An**. Trang "Về Vua Bảo Hộ" ghi "Công ty TNHH". Cài đặt Sapo ghi 405 Trần Thái Tông | Google Maps và Google Search cần tên, địa chỉ, số điện thoại giống hệt nhau ở mọi nơi mới tin tưởng; đây là gốc của SEO địa phương |
 | 7 | **Chưa có trang riêng cho doanh nghiệp và cho từng tỉnh** | Không có trang báo giá doanh nghiệp, không có trang cửa hàng Nam Định / Nghệ An. Chỉ có bài blog rải rác | Khách doanh nghiệp không có chỗ để gửi yêu cầu báo giá; từ khóa địa phương không có trang đích |
@@ -50,6 +50,27 @@ Các con số mục tiêu trên sẽ chốt lại ở **tuần 2**, khi có số
 3. **Doanh nghiệp cần trang giải pháp, không cần bài quảng cáo.** Phòng mua hàng và cán bộ an toàn tìm: quy định, danh sách theo ngành, chi phí, báo giá. Mỗi trang dẫn tới trang báo giá và hotline.
 4. **Địa phương = Google Maps + trang tỉnh + đánh giá thật.** Ba thứ này làm theo một mẫu cố định để mở tỉnh nào cũng nhân bản được ngay (`seo/dia-phuong-mau.md`).
 5. **Đi trước mùa ba tháng.** Áo điều hòa bán từ tháng 3 thì trang và nội dung phải xong trước giữa tháng 1, để Google kịp xếp hạng ổn định.
+
+### Định vị: Vua Bảo Hộ là nhà phân phối chính hãng, yamako.vn là web thương hiệu
+
+Anh Luận xác nhận ngày 17/10/2026: yamako.vn là web của anh. Vua Bảo Hộ là thương hiệu chuyên phân phối các dòng sản phẩm chính hãng, Yamako là một hãng uy tín được phân phối tại Vua Bảo Hộ.
+
+Hai web cùng chủ thì nên **chia vai, không tranh nhau**. Nếu cả hai cùng lên trang 1 cho "áo điều hòa" thì càng tốt (chiếm hai chỗ), miễn là nội dung không chép của nhau.
+
+| | yamako.vn (web thương hiệu) | vuabaoho.com (nhà phân phối) |
+|---|---|---|
+| Vai trò | Trang chính thức của hãng Yamako | Nơi mua hàng chính hãng nhiều hãng, tư vấn trung lập, phục vụ doanh nghiệp và tại cửa hàng |
+| Từ khóa chính | "Yamako", "áo điều hòa Yamako", "áo sưởi Yamako", tên từng mẫu Yamako, bảo hành Yamako, đại lý Yamako | "áo điều hòa", "áo điều hòa chính hãng", "áo điều hòa cho công nhân / doanh nghiệp", "áo điều hòa in logo", so sánh, giá, mua theo tỉnh, và toàn bộ đồ bảo hộ |
+| Nội dung | Thông tin hãng, thông số, hướng dẫn dùng, bảo hành, tin của hãng, hệ thống phân phối | Danh mục, trang doanh nghiệp, trang tỉnh, bài so sánh và tư vấn chọn hàng, bài an toàn lao động |
+| Liên kết sang web kia | Trang "Hệ thống phân phối / Mua ở đâu" liệt kê Vua Bảo Hộ Nam Định, Nghệ An, link về trang tỉnh và `/ao-dieu-hoa` | Trang thương hiệu Yamako ghi "trang chính thức của hãng: yamako.vn". Trong bài blog chỉ link sang yamako.vn khi thật sự cần (thông tin hãng, bảo hành), **không** làm lời kêu gọi mua hàng |
+
+Quy tắc:
+- **Không chép nội dung giữa hai web.** Mô tả sản phẩm và bài viết phải viết riêng cho từng web. Bài nào đang giống hệt nhau thì giữ ở một web, web kia viết lại hoặc bỏ.
+- Lời kêu gọi trên vuabaoho.com luôn là hotline 1900.3385 và hai cửa hàng Vua Bảo Hộ. 137 bài đang link sang yamako.vn sẽ được dọn khi gộp bài: giữ link khi nói về hãng, bỏ link kiểu "mua tại yamako.vn".
+- Bài trên vuabaoho.com chỉ nói về hãng Yamako (giới thiệu hãng, sự kiện ra mắt) hoặc nhắm khách Hà Nội (Vua Bảo Hộ không có cửa hàng ở Hà Nội) là ứng viên chuyển sang yamako.vn, anh quyết từng bài.
+- Kết nối **cả hai web** vào cùng tài khoản Search Console để theo dõi trang nào của web nào đang lên cho từ khóa nào, tránh hai web tự hạ nhau.
+- Chỉ ghi "nhà phân phối chính hãng" / "đại lý ủy quyền" cho hãng đã có xác nhận hoặc giấy ủy quyền (hiện đã xác nhận: Yamako). Có giấy ủy quyền của Safety Jogger, Fiv Out… thì chụp và đưa lên trang thương hiệu, đây là bằng chứng uy tín mạnh nhất với cả Google lẫn khách doanh nghiệp.
+- Web đang ẩn áo quạt Azuki, Kenko. Nếu Vua Bảo Hộ còn bán thì nên hiện lên, đúng định vị nhà phân phối nhiều hãng và giúp bài so sánh khách quan hơn; không bán thì giữ ẩn.
 
 ---
 
@@ -75,13 +96,16 @@ Trang chủ
 │   ├── Theo tính năng (tạo khi có từ 4 mẫu đang hiện): siêu nhẹ, chống tĩnh điện,
 │   │   cách điện, cao cổ, giày nữ
 │   └── Bài blog: ký hiệu, size, so sánh, đánh giá từng mẫu
+├── Thương hiệu phân phối .. /thuong-hieu (trang tổng các hãng, MỚI)
+│   └── /yamako (MỚI), /safety-jogger, /giay-bhld-fiv-out, … mỗi hãng một trang,
+│       có giấy ủy quyền nếu có, link trang chính thức của hãng
 └── Cửa hàng theo tỉnh
     ├── /bao-ho-lao-dong-nam-dinh, /giay-bao-ho-nam-dinh, /ao-dieu-hoa-nam-dinh (MỚI)
     ├── /bao-ho-lao-dong-nghe-an,  /giay-bao-ho-nghe-an,  /ao-dieu-hoa-nghe-an (MỚI)
     └── Tỉnh mới: nhân bản theo seo/dia-phuong-mau.md
 ```
 
-Menu chính và chân trang phải có đủ 4 cụm này. Chân trang ghi đủ cả hai cửa hàng.
+Menu chính và chân trang phải có đủ 4 cụm ngành và mục Thương hiệu. Chân trang ghi đủ cả hai cửa hàng.
 
 ### Mẫu nội dung cho trang danh mục (áp dụng cho mọi danh mục)
 
@@ -100,16 +124,19 @@ Menu chính và chân trang phải có đủ 4 cụm này. Chân trang ghi đủ
 Vấn đề không phải thiếu bài mà là **thừa bài và thiếu trang chính**. Việc cần làm:
 
 1. **Viết lại `/ao-dieu-hoa` thành trang trụ cột** theo mẫu danh mục ở trên: cách chọn (quạt, pin, vải, kiểu áo), bảng so sánh các dòng đang bán, phần "mua cho công nhân", câu hỏi thường gặp.
-2. **Tạo trang `/ao-dieu-hoa-cho-doanh-nghiep`**: giải pháp chống nóng cho công nhân, tính số lượng áo và pin dự phòng theo ca, quy trình đặt hàng, mẫu yêu cầu báo giá, nút gọi và Zalo. Nếu VBH có in logo lên áo điều hòa thì có thêm phần này (chờ anh xác nhận).
-3. **Gộp bài trùng** (làm theo đợt, có anh duyệt danh sách):
-   - Dùng số liệu Search Console 16 tháng: bài có lượt nhấp thì giữ và cập nhật; bài không có lượt nhấp và trùng ý với bài khác thì gộp nội dung tốt vào bài giữ lại, rồi chuyển hướng 301 (Sapo có sẵn chức năng chuyển hướng, web đang có 141 chuyển hướng).
-   - Dự kiến từ 539 bài còn khoảng 60–80 bài mạnh, chia theo chủ đề: cách chọn, pin và quạt, bảo quản, theo đối tượng (công nhân, shipper, nông dân…), so sánh, giá.
-   - Ví dụ: 5 bài "mua áo điều hòa tại Nam Định" gộp về trang `/ao-dieu-hoa-nam-dinh`; 32 bài về giá gộp về `/bang-gia-ao-dieu-hoa`.
+2. **Tạo trang `/ao-dieu-hoa-cho-doanh-nghiep`**: giải pháp chống nóng cho công nhân, tính số lượng áo và pin dự phòng theo ca, **in logo theo yêu cầu của khách** (anh đã xác nhận), quy trình đặt hàng, mẫu yêu cầu báo giá, nút gọi và Zalo. Cần ảnh thật áo đã in logo cho doanh nghiệp (khi khách đồng ý) để làm bằng chứng.
+3. **Gộp bài trùng** (làm theo đợt, có anh duyệt danh sách). Cách làm cho mỗi nhóm bài cùng trả lời một câu hỏi:
+   1. Chọn một bài chính (hoặc một trang đích như `/ao-dieu-hoa-nam-dinh`).
+   2. Chuyển những ý hay, câu hỏi, ảnh thật từ các bài trùng sang bài chính; viết lại cho mạch lạc, cập nhật năm 2027; bỏ mã sót từ ChatGPT và link mua hàng sang yamako.vn.
+   3. Ẩn các bài trùng (không xóa hẳn, bật lại được).
+   4. Tạo chuyển hướng 301 từ đường dẫn bài trùng về bài chính (Sapo có sẵn chức năng này, web đang có 141 chuyển hướng). Người bấm link cũ từ Google, Facebook, Zalo tự sang bài chính, không gặp trang lỗi; Google chuyển phần lớn sức mạnh của bài cũ sang bài chính.
+   - Bản nháp phân nhóm cả 540 bài: `seo/gop-bai-ao-dieu-hoa.md`. Khi có Search Console thì chốt lại: bài đang có lượt nhấp riêng thì không gộp.
+   - Làm thử 1 nhóm trước, theo dõi 2 tuần; ổn thì làm tiếp theo đợt khoảng 50 bài/tuần. Tụt thì hoàn tác (xóa chuyển hướng, bật lại bài).
    - Gộp trong tháng 11–12 để Google ổn định trước tháng 3.
 4. **Bài mới chỉ viết góc doanh nghiệp** (chưa có bài nào): chống nóng cho người lao động theo quy định, chi phí trang bị cho 50–100 công nhân, quản lý sạc pin cho cả xưởng, sơ cứu say nắng ở công trường. Đã đưa vào kế hoạch bài tự động.
 5. **Hàng mẫu 2027 lên web trước 15/02/2027**, có ảnh thật và thông số đầy đủ.
 
-Câu hỏi quan trọng cho anh: **yamako.vn có phải web của anh không?** Một số bài trên vuabaoho.com nhắc "Yamako.vn". Nếu cùng chủ, hai web đang tranh nhau từ khóa "áo điều hòa" và cần chia vai trò (ví dụ yamako.vn giữ từ khóa thương hiệu Yamako, vuabaoho.com giữ từ khóa doanh nghiệp và địa phương).
+6. **Tạo trang thương hiệu `/yamako`** trên vuabaoho.com (áo điều hòa và áo sưởi Yamako), ghi rõ Vua Bảo Hộ phân phối chính hãng và link trang chính thức yamako.vn. Từ khóa thương hiệu Yamako để yamako.vn giữ vị trí chính (xem mục "Định vị" ở trên).
 
 ### Ngành 2 — Đồ bảo hộ lao động cho doanh nghiệp
 
@@ -150,7 +177,7 @@ Nhờ bộ phận hỗ trợ Sapo hoặc thuê một lập trình viên giao di�
 | # | Việc | Mức độ |
 |---|---|---|
 | 1 | Sửa lỗi Liquid hiện trên mọi trang | Gấp |
-| 2 | Chân trang: đúng tên công ty, địa chỉ mới, đủ hai cửa hàng và số điện thoại | Gấp |
+| 2 | Chân trang: sửa "Công ty Cổ Phần" thành **"Công ty TNHH Vua Bảo Hộ"**, địa chỉ mới, đủ hai cửa hàng và số điện thoại | Gấp |
 | 3 | Thêm schema Product cho trang sản phẩm (tên, ảnh, giá, còn hàng, thương hiệu) | Gấp |
 | 4 | Giao diện danh mục hiện được phần mô tả trên và dưới lưới sản phẩm | Gấp |
 | 5 | Sửa lỗi JSON của schema NewsArticle | Cao |
@@ -168,7 +195,7 @@ Việc anh tự làm được: cập nhật địa chỉ trong Cài đặt Sapo,
 
 Từ khóa gốc toàn quốc cần web khác trỏ link về. Chỉ làm các nguồn thật:
 
-1. **Hãng và nhà phân phối**: xin đưa tên và link Vua Bảo Hộ vào danh sách đại lý của Safety Jogger Việt Nam, Yamako, Fiv Out.
+1. **Hãng và nhà phân phối**: xin đưa tên và link Vua Bảo Hộ vào danh sách đại lý của Safety Jogger Việt Nam, Fiv Out. Trên yamako.vn (web của anh) làm trang "Hệ thống phân phối" có Vua Bảo Hộ Nam Định, Nghệ An, link về trang tỉnh. Link giữa hai web cùng chủ có ích cho khách nhưng Google tính nhẹ hơn link từ web độc lập, nên vẫn cần các nguồn bên dưới.
 2. **Báo địa phương**: bài về hoạt động có thật, ví dụ khai trương, hoặc tặng áo điều hòa cho công nhân vệ sinh môi trường mùa nắng. Vừa có link, vừa có tiếng ở tỉnh.
 3. **Hiệp hội và khu công nghiệp**: hội doanh nghiệp tỉnh, ban quản lý khu công nghiệp (danh bạ nhà cung cấp, hội viên).
 4. **Khách doanh nghiệp**: xin phép đưa câu chuyện cung cấp hàng lên web (có sự đồng ý), đổi lại họ ghi nhà cung cấp.
@@ -183,7 +210,7 @@ Không mua link hàng loạt, không dùng mạng web vệ tinh, không spam bì
 
 ### Giai đoạn 1 — Nền móng và thắng nhanh địa phương (tuần 1–4: 19/10 → 15/11/2026)
 
-- [ ] Kết nối Google Search Console, Bing Webmaster; gửi sitemap. Lấy số liệu 16 tháng, chốt thứ hạng hiện tại của 40 từ khóa chính.
+- [ ] Kết nối Google Search Console, Bing Webmaster cho **cả vuabaoho.com và yamako.vn**; gửi sitemap. Lấy số liệu 16 tháng, chốt thứ hạng hiện tại của 40 từ khóa chính.
 - [ ] Sửa kỹ thuật mục 1–4 (lỗi Liquid, chân trang, schema Product, hiện mô tả danh mục).
 - [ ] Google Business Profile hai cửa hàng: xác minh, điền đủ, 30 ảnh, bắt đầu xin đánh giá.
 - [ ] Tạo danh mục `/giay-bao-ho-lao-dong`; viết mô tả và SEO cho 9 danh mục: áo điều hòa, giày bảo hộ, Safety Jogger, Fiv Out bảo hộ, kính, mũ, găng tay, quần áo bảo hộ, áo sưởi.
@@ -196,7 +223,8 @@ Không mua link hàng loạt, không dùng mạng web vệ tinh, không spam bì
 
 - [ ] Hiển thị quần áo bảo hộ, mũ, găng tay, ủng (gộp size). Tạo `/do-bao-ho-lao-dong`, `/ung-bao-ho-lao-dong`.
 - [ ] Danh mục giày theo tính năng (khi đủ hàng).
-- [ ] Áo điều hòa: duyệt danh sách gộp bài, chuyển hướng theo đợt 50 bài/tuần, theo dõi Search Console sau mỗi đợt. Viết lại `/ao-dieu-hoa`. Tạo `/ao-dieu-hoa-cho-doanh-nghiep`.
+- [ ] Trang `/thuong-hieu` và `/yamako` trên vuabaoho.com; trang "Hệ thống phân phối" trên yamako.vn có Vua Bảo Hộ Nam Định, Nghệ An.
+- [ ] Áo điều hòa: duyệt danh sách gộp bài (`seo/gop-bai-ao-dieu-hoa.md`), làm thử 1 nhóm, rồi gộp theo đợt khoảng 50 bài/tuần, theo dõi Search Console sau mỗi đợt. Viết lại `/ao-dieu-hoa`. Tạo `/ao-dieu-hoa-cho-doanh-nghiep`.
 - [ ] Sửa kỹ thuật mục 5–8.
 - [ ] Đưa thông tin lên 10–15 trang danh bạ. Mỗi cửa hàng có thêm 30 đánh giá.
 - [ ] Liên kết đợt 1: hãng và nhà phân phối, hội doanh nghiệp tỉnh.
@@ -251,10 +279,16 @@ Không mua link hàng loạt, không dùng mạng web vệ tinh, không spam bì
 
 ## 11. Cần anh trả lời để làm tiếp
 
-1. **yamako.vn có phải web của anh không?** (quyết định cách chia từ khóa áo điều hòa giữa hai web)
-2. **Tên pháp lý đúng là Công ty TNHH hay Công ty Cổ phần Vua Bảo Hộ?** Chân trang và trang giới thiệu đang ghi khác nhau.
-3. **VBH có in hoặc thêu logo lên áo điều hòa không?** Có số lượng tối thiểu không? (để viết trang doanh nghiệp, không ghi khi chưa xác nhận)
-4. **Anh đồng ý gộp bài áo điều hòa trùng và chuyển hướng 301 không?** Em sẽ lập danh sách cho anh duyệt trước, làm theo đợt, có thể hoàn tác bằng cách xóa chuyển hướng.
-5. **Hai cửa hàng đã có hồ sơ Google Maps chưa, ai đang giữ tài khoản?**
-6. **Ai làm phần nhập liệu sản phẩm và ai sửa giao diện?** Có ngân sách thuê ngoài và làm bài báo địa phương không?
-7. **VBH có bán dây an toàn, mặt nạ phòng độc, quần áo chống hóa chất không?** Để quyết có tạo danh mục cho các nhóm này.
+Đã trả lời ngày 17/10/2026:
+- yamako.vn là web của anh; Vua Bảo Hộ là nhà phân phối các dòng chính hãng, Yamako là một hãng được phân phối tại Vua Bảo Hộ → xem mục "Định vị" ở phần 3.
+- Tên pháp lý: **Công ty TNHH Vua Bảo Hộ** → sửa chân trang (đang ghi "Cổ Phần").
+- Vua Bảo Hộ **in logo theo yêu cầu của khách** → đưa vào trang `/ao-dieu-hoa-cho-doanh-nghiep` và trang báo giá.
+
+Còn chờ:
+1. **Duyệt bản nháp gộp bài áo điều hòa** (`seo/gop-bai-ao-dieu-hoa.md`): đồng ý cách làm thì em làm thử 1 nhóm trước.
+2. **Hai cửa hàng đã có hồ sơ Google Maps chưa, ai đang giữ tài khoản?**
+3. **Ai làm phần nhập liệu sản phẩm và ai sửa giao diện?** Có ngân sách thuê ngoài và làm bài báo địa phương không?
+4. **Vua Bảo Hộ có bán dây an toàn, mặt nạ phòng độc, quần áo chống hóa chất không?** Để quyết có tạo danh mục cho các nhóm này.
+5. **Có giấy ủy quyền phân phối của hãng nào ngoài Yamako** (Safety Jogger, Fiv Out…)? Có thì chụp gửi em để đưa lên trang thương hiệu.
+6. **In logo có số lượng tối thiểu hoặc thời gian làm không?** Chỉ ghi lên web khi anh xác nhận con số.
+7. **Cho em quyền xem yamako.vn** (mã API Sapo của web đó và mở mạng cho môi trường này) để kiểm tra bài nào đang trùng giữa hai web.
