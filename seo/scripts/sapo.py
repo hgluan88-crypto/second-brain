@@ -32,6 +32,7 @@ SITE = os.environ.get("SAPO_SITE", "https://vuabaoho.com")
 BLOG_ID = int(os.environ.get("SAPO_BLOG_ID", "562093"))  # blog "Thông tin tiêu dùng" (/tin-tuc)
 KHO_ANH_ID = int(os.environ.get("SAPO_KHO_ANH_ID", "94248792"))  # sản phẩm ẩn "KHO ẢNH BÀI VIẾT"
 AUTO_TAG = "seo-tu-dong"  # gắn cho mọi bài do lịch tự động đăng
+PHASE1_LIMIT = 14  # 14 bài tự động đầu tiên phải để ẩn chờ anh Luận duyệt
 AUTHOR = "Vua Bảo Hộ"
 UA = "VBH-SEO-bot/1.0"  # Sapo chặn User-Agent mặc định của Python (trả 403)
 
@@ -145,9 +146,12 @@ def cmd_alias_exists(a):
     sys.exit(1)
 
 
+def count_auto():
+    return sum(1 for r in all_articles() if AUTO_TAG in (r.get("tags") or ""))
+
+
 def cmd_count_auto(a):
-    rows = [r for r in all_articles() if AUTO_TAG in (r.get("tags") or "")]
-    print(len(rows))
+    print(count_auto())
 
 
 def cmd_products(a):
@@ -271,6 +275,10 @@ def cmd_update_article(a):
         spec = json.load(f)
     payload = _article_payload(spec, False)
     payload["id"] = a.id
+    if "tags" in payload:  # giữ tag bài tự động, nếu không quy tắc 14 bài đầu sẽ đếm sai
+        old = api("GET", f"blogs/{BLOG_ID}/articles/{a.id}.json")["article"].get("tags") or ""
+        if AUTO_TAG in old and AUTO_TAG not in payload["tags"]:
+            payload["tags"] += f", {AUTO_TAG}"
     res = api("PUT", f"blogs/{BLOG_ID}/articles/{a.id}.json", {"article": payload})
     art = res["article"]
     print(json.dumps({"id": art["id"], "alias": art["alias"], "published_on": art["published_on"]},
@@ -278,6 +286,11 @@ def cmd_update_article(a):
 
 
 def cmd_publish(a):
+    if not a.anh_da_duyet:
+        n = count_auto()
+        if n <= PHASE1_LIMIT:
+            sys.exit(f"KHÔNG ĐĂNG: mới có {n} bài tự động (giai đoạn {PHASE1_LIMIT} bài đầu). "
+                     "Bài phải để ẩn chờ anh Luận duyệt. Không tìm cách khác để hiện bài.")
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     res = api("PUT", f"blogs/{BLOG_ID}/articles/{a.id}.json",
               {"article": {"id": a.id, "published_on": now}})  # trường "published" không có tác dụng
@@ -456,8 +469,10 @@ def main():
     s.add_argument("spec")
     s.set_defaults(f=cmd_update_article)
 
-    s = sp.add_parser("publish", help="hiện bài lên web (đặt published_on = bây giờ)")
+    s = sp.add_parser("publish", help=f"hiện bài lên web; tự từ chối khi chưa quá {PHASE1_LIMIT} bài tự động")
     s.add_argument("id", type=int)
+    s.add_argument("--anh-da-duyet", action="store_true",
+                   help="chỉ dùng khi chính anh Luận vừa bảo đăng bài này; lịch tự động không bao giờ dùng")
     s.set_defaults(f=cmd_publish)
 
     s = sp.add_parser("hide", help="ẩn lại một bài đang hiện (dùng khi phát hiện lỗi sau khi đăng)")

@@ -93,10 +93,11 @@ Chạy `sapo.py create-article $W/spec.json` (tạo ẩn, tác giả "Vua Bảo 
 
 ## Bước 7. Ẩn hay hiện
 
-- `sapo.py count-auto` đếm cả bài vừa tạo. Nếu kết quả **≤ 14**: giữ **ẩn** (giai đoạn 14 bài đầu, anh duyệt rồi tự bấm hiện).
-- Nếu **> 14** và bài đã đạt duyệt: `sapo.py publish <id>`.
-- Bài chưa đạt duyệt: luôn để ẩn.
-- Anh có thể đổi quy tắc này bằng cách sửa mục này.
+- 14 bài tự động đầu tiên **luôn để ẩn**, anh duyệt rồi tự bấm hiện. `sapo.py count-auto` đếm cả bài vừa tạo.
+- Chỉ khi bài đã đạt duyệt thì mới chạy `sapo.py publish <id>`. Lệnh tự kiểm tra quy tắc 14 bài: nếu lệnh báo "KHÔNG ĐĂNG" thì bài để ẩn, báo cáo là "đang ẩn chờ anh duyệt", **không** tìm cách khác để hiện bài (không sửa `published_on`, không gọi API trực tiếp).
+- **Không bao giờ** dùng cờ `--anh-da-duyet` trong lịch tự động. Cờ này chỉ dành cho phiên trò chuyện khi chính anh vừa bảo đăng một bài cụ thể.
+- Bài chưa đạt duyệt: luôn để ẩn, không chạy `publish`.
+- Chữ "đăng" trong yêu cầu của lịch nghĩa là tạo bài và làm theo quy tắc ẩn/hiện ở đây.
 
 ## Bước 8. Kiểm tra sau khi đăng
 
