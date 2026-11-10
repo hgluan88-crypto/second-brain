@@ -42,6 +42,25 @@ Cập nhật: 17/10/2026. Lịch tự động đọc file này mỗi lần viế
 | B. Theo mùa | khoảng 20% | Tháng 10–1: áo sưởi, áo giữ nhiệt, chống rét cho công nhân, quà Tết doanh nghiệp. Từ cuối tháng 11: áo điều hòa **chỉ góc doanh nghiệp, góc mới** (đã có 539 bài). |
 | D. Địa phương | khoảng 10% | Bài thông tin cho doanh nghiệp trong tỉnh, ví dụ đồ bảo hộ cho khu công nghiệp Nghệ An, Nam Định. Không viết bài kiểu "cửa hàng … tại …" (đã là trang riêng). |
 
+## Dạng nội dung và cách phối
+
+Mỗi chủ đề trong kế hoạch ghi rõ **dạng nội dung**. Các dạng dùng thường xuyên:
+
+| Dạng | Ví dụ |
+|---|---|
+| Top hãng | Top hãng giày bảo hộ có mặt ở Việt Nam; các hãng áo điều hòa |
+| Top mẫu | Top mẫu giày bảo hộ đang bán; top mẫu quần áo bảo hộ theo chất liệu |
+| Top theo công việc | Top găng tay cho thợ hàn; giày cho nhà máy điện tử |
+| Top theo ngân sách | Giày bảo hộ dưới 500 nghìn |
+| So sánh A và B | Giày Fiv Out và Safety Jogger |
+| Hướng dẫn chọn, checklist theo ngành | Đồ bảo hộ cho công nhân xây dựng |
+| Theo mùa, quà tặng | Chống rét cho công nhân; quà Tết cho công nhân |
+| Theo địa phương | Đồ bảo hộ cho khu công nghiệp Nghệ An |
+
+Phối các yếu tố **sản phẩm × công việc/ngành × đối tượng × mùa × ngân sách × địa phương** để ra chủ đề mới, nhưng chỉ chọn tổ hợp có người tìm thật và không trùng ý định với bài đã có. Bài dạng Top và so sánh theo đúng mục "Bài dạng Top và so sánh" trong `seo/tieu-chi-duyet-bai.md`: có tiêu chí chọn, công khai hãng Vua Bảo Hộ đang bán (áo điều hòa: nhà phân phối Yamako), không "số 1"/"tốt nhất" khi không có số liệu, không link shop khác, không chê ai.
+
+Web đã có nhiều bài "top áo điều hòa" cũ: chủ đề top áo điều hòa thì **cập nhật bài cũ** theo `seo/gop-bai-ao-dieu-hoa.md`, không viết bài mới.
+
 ## Quy tắc chọn chủ đề
 
 - **Mỗi từ khóa chính chỉ có một bài.** Trước khi viết phải tìm bài cũ (`sapo.py search-articles`) và tra `seo/tu-khoa-muc-tieu.md`. Nếu đã có bài hoặc trang cùng ý định tìm kiếm thì đổi sang góc khác hẳn, hoặc bỏ chủ đề đó.

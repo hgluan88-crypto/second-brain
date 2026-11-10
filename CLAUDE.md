@@ -33,9 +33,13 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 ## Đăng bài SEO tự động
 - Quy trình: skill `.claude/skills/dang-bai-seo`; công cụ `seo/scripts/sapo.py`; chiến lược `seo/chien-luoc.md`; kế hoạch `seo/ke-hoach-noi-dung.md`; tiêu chí duyệt `seo/tieu-chi-duyet-bai.md`.
 - Chiến lược tổng 6 tháng (19/10/2026 → 18/04/2027, 4 ngành: áo điều hòa, đồ bảo hộ cho doanh nghiệp, giày bảo hộ, địa phương): `seo/chien-luoc-6-thang.md`. Sổ từ khóa (mỗi từ khóa một trang): `seo/tu-khoa-muc-tieu.md`. Mẫu SEO khi mở cửa hàng tỉnh mới: `seo/dia-phuong-mau.md`.
-- Lịch tự động chạy 7h50 sáng mỗi ngày (giờ Việt Nam), mỗi lần một bài, gắn tag `seo-tu-dong`.
-- 14 bài tự động đầu tiên để ẩn chờ anh duyệt, từ bài thứ 15 đăng thẳng.
-- ChatGPT duyệt bài qua OpenAI API (Network secret cho api.openai.com). Chưa có mã thì Claude duyệt thay và ghi rõ trong báo cáo.
+- Hai lượt mỗi ngày (giờ Việt Nam), anh chọn ngày 10/11/2026:
+  - 7h50: viết một bài, duyệt, tạo bài ẩn, bài đạt thì gắn tag `cho-dang`, ghi một hàng vào Google Sheet theo dõi.
+  - Khoảng 14h: đăng các bài `cho-dang`, trừ bài anh ghi "Không đăng" ở cột "Anh duyệt" trong sheet ("im lặng là đồng ý").
+- Google Sheet theo dõi: ID nằm trong lời nhắc của lịch tự động, không ghi vào repo (sheet để chế độ ai có link đều xem được). Cần connector Google Sheets.
+- Người duyệt: ChatGPT qua OpenAI API khi môi trường có Network secret cho api.openai.com (hiện chưa có). Chưa có thì Claude duyệt bằng hai agent (kiểm tra + phản biện) và ghi rõ trong báo cáo.
+- Bài tự động gắn tag `seo-tu-dong`. Mốc 14 bài đầu để ẩn đã qua.
+- Loạt bài dạng Top, so sánh và phối nội dung: quy tắc trong `seo/chien-luoc.md` (mục "Dạng nội dung và cách phối") và `seo/tieu-chi-duyet-bai.md`.
 
 ## Chữ viết tắt
 - **CHT = Cửa hàng trưởng** (không phải chỉ huy trưởng)

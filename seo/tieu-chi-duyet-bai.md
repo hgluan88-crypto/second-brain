@@ -28,6 +28,24 @@ Dùng chung cho ChatGPT duyệt (script `seo/scripts/openai_review.py`) và cho 
 - Chê bai, so sánh hạ thấp đối thủ cụ thể.
 - Còn sót ghi chú nội bộ, chỗ trống kiểu [cần bổ sung], hoặc lời nói với người duyệt.
 
+## Bài dạng "Top" và so sánh
+
+- Đầu bài nêu rõ **tiêu chí chọn** (tiêu chuẩn kỹ thuật, có nhà phân phối chính hãng ở Việt Nam, phù hợp công việc, giá công khai). Thiếu tiêu chí: trừ ở mục 3.
+- Mỗi mục có: hợp với ai, điểm mạnh, giới hạn, thông số có nguồn. Giá chỉ lấy từ trang sản phẩm vuabaoho.com, ghi "giá tham khảo tháng … năm …".
+- Công khai Vua Bảo Hộ đang bán hãng nào trong danh sách. Bài về áo điều hòa phải ghi Vua Bảo Hộ là nhà phân phối Yamako.
+- Lỗi nghiêm trọng riêng của dạng này: ghi "số 1", "tốt nhất", "bán chạy nhất", "hàng đầu" mà không có số liệu kiểm chứng; nêu hãng không có mặt chính thức ở Việt Nam như thể đang bán phổ biến; link sang cửa hàng khác; chê hãng hoặc đối thủ.
+
+## Điểm pháp lý đã kiểm chứng (đối chiếu khi chấm)
+
+- Nghị định 283/2026/NĐ-CP (ký 15/7/2026, hiệu lực 10/9/2026) thay thế Nghị định 12/2022/NĐ-CP về xử phạt vi phạm hành chính lĩnh vực lao động, bảo hiểm xã hội. Bài còn dẫn Nghị định 12/2022 như văn bản đang áp dụng là sai.
+- Thông tư 25/2022/TT-BLĐTBXH (hiệu lực 01/4/2023, thay Thông tư 04/2014): **bắt buộc** lập sổ trang cấp theo mẫu Phụ lục II, có chữ ký xác nhận của người lao động hoặc đại diện tổ, đội, phân xưởng. Thông tư **không** ấn định thời hạn sử dụng từng loại phương tiện; người sử dụng lao động tự quyết theo yêu cầu công việc và khuyến nghị nhà sản xuất.
+- Bộ luật Lao động 2019: cấm phạt tiền, cắt lương thay cho xử lý kỷ luật lao động (khoản 2 Điều 127); hình thức kỷ luật chỉ gồm khiển trách, kéo dài thời hạn nâng lương không quá 6 tháng, cách chức, sa thải (Điều 124).
+- Giày EN ISO 20345: ký hiệu S3 không có chữ P (S3 đã gồm chống đâm xuyên). Bản 2022 bỏ SRA/SRB/SRC, dùng SR cho phép thử tùy chọn.
+- Kính EN 166: ký hiệu 3, 4, 5 chỉ dành cho kính chụp, không có trên kính gọng.
+- Rét đậm: nhiệt độ trung bình ngày từ 15 độ C trở xuống; rét hại: dưới 13 độ C (Quyết định 18/2021/QĐ-TTg).
+
+Danh sách này chỉ để đối chiếu nhanh, người chấm vẫn tự kiểm chứng khi bài nói khác hoặc khi văn bản có thể đã thay đổi.
+
 ## Thông tin doanh nghiệp (đúng như sau)
 
 - Công ty TNHH Vua Bảo Hộ — website vuabaoho.com — khẩu hiệu "Bảo vệ bạn như bảo vệ VUA".
