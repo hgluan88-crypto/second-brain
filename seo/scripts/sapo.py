@@ -32,6 +32,7 @@ SITE = os.environ.get("SAPO_SITE", "https://vuabaoho.com")
 BLOG_ID = int(os.environ.get("SAPO_BLOG_ID", "562093"))  # blog "Thông tin tiêu dùng" (/tin-tuc)
 KHO_ANH_ID = int(os.environ.get("SAPO_KHO_ANH_ID", "94248792"))  # sản phẩm ẩn "KHO ẢNH BÀI VIẾT"
 AUTO_TAG = "seo-tu-dong"  # gắn cho mọi bài do lịch tự động đăng
+READY_TAG = "cho-dang"  # bài ẩn đã đạt duyệt, chờ lượt đăng 14h
 PHASE1_LIMIT = 14  # 14 bài tự động đầu tiên phải để ẩn chờ anh Luận duyệt
 AUTHOR = "Vua Bảo Hộ"
 UA = "VBH-SEO-bot/1.0"  # Sapo chặn User-Agent mặc định của Python (trả 403)
@@ -295,7 +296,34 @@ def cmd_publish(a):
     res = api("PUT", f"blogs/{BLOG_ID}/articles/{a.id}.json",
               {"article": {"id": a.id, "published_on": now}})  # trường "published" không có tác dụng
     art = res["article"]
+    if READY_TAG in _tags(art):
+        _set_tags(a.id, [t for t in _tags(art) if t != READY_TAG])
     print(f"Đã hiện bài id={art['id']} lúc {art['published_on']}: {SITE}/{art['alias']}")
+
+
+def _tags(art):
+    return [t.strip() for t in (art.get("tags") or "").split(",") if t.strip()]
+
+
+def _set_tags(aid, tags):
+    api("PUT", f"blogs/{BLOG_ID}/articles/{aid}.json", {"article": {"id": aid, "tags": ", ".join(tags)}})
+
+
+def cmd_mark_ready(a):
+    art = api("GET", f"blogs/{BLOG_ID}/articles/{a.id}.json")["article"]
+    tags = [t for t in _tags(art) if t != READY_TAG]
+    if not a.bo:
+        if art.get("published_on"):
+            sys.exit(f"Bài id={a.id} đang hiện, không cần đánh dấu chờ đăng.")
+        tags.append(READY_TAG)
+    _set_tags(a.id, tags)
+    print(f"{'Bỏ' if a.bo else 'Đã'} đánh dấu chờ đăng bài id={a.id}: /{art['alias']}")
+
+
+def cmd_pending(a):
+    rows = [{"id": r["id"], "alias": r["alias"], "title": r["title"], "created_on": r.get("created_on")}
+            for r in all_articles() if not r.get("published_on") and READY_TAG in _tags(r)]
+    out(rows, a.out)
 
 
 def cmd_get_article(a):
@@ -474,6 +502,15 @@ def main():
     s.add_argument("--anh-da-duyet", action="store_true",
                    help="chỉ dùng khi chính anh Luận vừa bảo đăng bài này; lịch tự động không bao giờ dùng")
     s.set_defaults(f=cmd_publish)
+
+    s = sp.add_parser("mark-ready", help=f"đánh dấu bài ẩn đã đạt duyệt, chờ lượt đăng 14h (tag {READY_TAG})")
+    s.add_argument("id", type=int)
+    s.add_argument("--bo", action="store_true", help="bỏ đánh dấu (anh ghi \"Không đăng\")")
+    s.set_defaults(f=cmd_mark_ready)
+
+    s = sp.add_parser("pending", help="liệt kê bài ẩn đang chờ lượt đăng 14h")
+    s.add_argument("--out")
+    s.set_defaults(f=cmd_pending)
 
     s = sp.add_parser("hide", help="ẩn lại một bài đang hiện (dùng khi phát hiện lỗi sau khi đăng)")
     s.add_argument("id", type=int)
