@@ -32,8 +32,12 @@ Dùng chung cho ChatGPT duyệt (script `seo/scripts/openai_review.py`) và cho 
 
 - Đầu bài nêu rõ **tiêu chí chọn** (tiêu chuẩn kỹ thuật, có nhà phân phối chính hãng ở Việt Nam, phù hợp công việc, giá công khai). Thiếu tiêu chí: trừ ở mục 3.
 - Mỗi mục có: hợp với ai, điểm mạnh, giới hạn, thông số có nguồn. Giá chỉ lấy từ trang sản phẩm vuabaoho.com, ghi "giá tham khảo tháng … năm …".
-- Công khai Vua Bảo Hộ đang bán hãng nào trong danh sách. Bài về áo điều hòa phải ghi Vua Bảo Hộ là nhà phân phối Yamako.
-- Lỗi nghiêm trọng riêng của dạng này: ghi "số 1", "tốt nhất", "bán chạy nhất", "hàng đầu" mà không có số liệu kiểm chứng; nêu hãng không có mặt chính thức ở Việt Nam như thể đang bán phổ biến; link sang cửa hàng khác; chê hãng hoặc đối thủ.
+- Công khai Vua Bảo Hộ đang bán hãng nào trong danh sách, ngay đầu bài. Bài có Yamako phải ghi Vua Bảo Hộ là nhà phân phối Yamako; hãng chỉ nêu để tham khảo thì ghi rõ là tham khảo.
+- Xếp các hãng theo chữ cái hoặc theo nhóm nhu cầu, ghi rõ "không phải xếp hạng". Mọi hãng viết cùng một khuôn, kể cả hãng Vua Bảo Hộ bán (cũng có mục giới hạn).
+- Mỗi hãng có bằng chứng có mặt ở Việt Nam (trang tiếng Việt của hãng, pháp nhân hoặc nhà phân phối). Xuất xứ chỉ ghi theo giấy tờ, tài liệu hãng hoặc tem nhãn; chữ "Nhật Bản", "nhập khẩu" chỉ ghi khi có căn cứ.
+- Không dùng "phổ biến", "mạnh", "ưa chuộng" khi không có số liệu; không dẫn trang xếp hạng kiểu toplist; không so sánh chất lượng theo nước sản xuất.
+- Lỗi nghiêm trọng riêng của dạng này: ghi "số 1", "tốt nhất", "bán chạy nhất", "hàng đầu" mà không có số liệu kiểm chứng; nêu hãng không có mặt chính thức ở Việt Nam như thể đang bán phổ biến; ghi xuất xứ hoặc chứng nhận không có căn cứ; link sang cửa hàng khác; chê hãng hoặc đối thủ.
+- Giày, ủng "cách điện": chỉ ghi khi tài liệu hãng hoặc tem sản phẩm ghi rõ tiêu chuẩn và mức điện áp. Giày chống tĩnh điện (ESD) **không** phải giày cách điện; viết lẫn hai loại là lỗi nghiêm trọng.
 
 ## Điểm pháp lý đã kiểm chứng (đối chiếu khi chấm)
 

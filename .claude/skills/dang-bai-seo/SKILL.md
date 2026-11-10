@@ -23,7 +23,10 @@ Công cụ: `python3 seo/scripts/sapo.py <lệnh>` (chạy `--help` để xem l�
 
 ## Bước 1. Chọn chủ đề
 
-1. Đi từ trên xuống bảng trong `seo/ke-hoach-noi-dung.md`. Với mỗi dòng chạy `sapo.py alias-exists <đường dẫn>`: "CÓ" thì bỏ qua; "CHƯA CÓ" thì chọn dòng đó.
+1. Đi từ trên xuống bảng "Lịch tự động" trong `seo/ke-hoach-noi-dung.md`. Với mỗi dòng chạy `sapo.py alias-exists <đường dẫn>`: "CÓ" thì bỏ qua; "CHƯA CÓ" thì chọn dòng đó.
+   - Dòng có chữ **Chỉ viết khi** mà điều kiện chưa đạt (kiểm tra bằng `sapo.py products` hoặc `curl` trang): bỏ qua, ghi lý do vào báo cáo, xét dòng kế tiếp.
+   - Dòng có mã T (ví dụ T10): đọc mục "Chi tiết chủ đề Top" cùng mã trong file kế hoạch (phối từ, liên kết, lưu ý, cách xử lý bài cũ) trước khi viết.
+   - Phần "Cập nhật bài cũ" trong file kế hoạch **không** thuộc lịch tự động: không chọn, không sửa các bài đó.
 2. Chống trùng: `sapo.py search-articles <2–4 từ khóa của chủ đề>`. Nếu có bài cũ cùng ý định tìm kiếm (người tìm sẽ thấy hai bài trả lời cùng một câu hỏi), đổi góc viết cho khác hẳn và ghi lý do vào báo cáo. Nếu không đổi được, bỏ qua chủ đề này, ghi vào báo cáo, chọn dòng kế tiếp.
    Tra thêm `seo/tu-khoa-muc-tieu.md`: từ khóa đã giao cho trang danh mục, trang tỉnh hay trang doanh nghiệp thì bài không được nhắm vào từ khóa đó, chỉ đặt link về trang ấy (khi trang đã hiện).
 3. Hết bảng: tự đề xuất một chủ đề theo `seo/chien-luoc.md` (đúng mùa, chưa có bài, ưu tiên nhóm A và D), đặt đường dẫn không dấu, gạch nối, dưới 70 ký tự. Ghi "ĐÃ HẾT KẾ HOẠCH" vào báo cáo.
@@ -67,7 +70,7 @@ Khung bài, khoảng 1.200–1.800 chữ:
 6. Mục `<h2>` cuối: liên hệ, ghi đúng thông tin doanh nghiệp trong `CLAUDE.md` (hotline 1900.3385, hai cửa hàng kèm số điện thoại, website).
 7. Chạy `sapo.py faq-schema $W/bai.html` để gắn schema FAQPage vào cuối bài.
 
-Bài dạng Top hoặc so sánh: theo mục "Dạng nội dung và cách phối" trong `seo/chien-luoc.md` và mục "Bài dạng Top và so sánh" trong `seo/tieu-chi-duyet-bai.md` (tiêu chí chọn ở đầu bài, công khai hãng Vua Bảo Hộ đang bán, không "số 1" khi không có số liệu). Chủ đề ghi "cập nhật bài cũ" trong kế hoạch thì không tạo bài mới: dùng `update-article` cho bài cũ đó, và chỉ làm khi bài cũ do quy trình tự động tạo; nếu không, bỏ qua và báo anh.
+Bài dạng Top hoặc so sánh: theo mục "Dạng nội dung và cách phối" trong `seo/chien-luoc.md` và mục "Bài dạng Top và so sánh" trong `seo/tieu-chi-duyet-bai.md` (tiêu chí chọn ở đầu bài, công khai hãng Vua Bảo Hộ đang bán, không "số 1" khi không có số liệu). Lịch tự động chỉ viết bài mới. Chủ đề "cập nhật bài cũ" làm trong phiên riêng với anh, không tạo bài mới trùng ý định với bài cũ.
 
 Văn phong: tiếng Việt tự nhiên, xưng "anh chị" (bài cho doanh nghiệp có thể dùng "doanh nghiệp"). Không sáo rỗng, không phóng đại, không viết hoa cả câu, không dùng biểu tượng cảm xúc, không giật tít. Viết đúng thuật ngữ ngành (ví dụ S1P, SRC, EN ISO 20345, dB).
 
@@ -104,6 +107,7 @@ Chạy `sapo.py create-article $W/spec.json` (tạo ẩn, tác giả "Vua Bảo 
 ## Bước 7. Đánh dấu chờ đăng (lượt 7h50 KHÔNG đăng bài)
 
 - Bài **đạt** duyệt: `sapo.py mark-ready <id>`. Bài vẫn ẩn; lượt đăng khoảng 14h (Bước 10) sẽ đăng nếu anh không chặn.
+- Dòng kế hoạch ghi **Để ẩn chờ anh duyệt** (ví dụ bài pháp lý): dù đạt cũng **không** `mark-ready`; để ẩn, chờ anh bảo đăng trong phiên trò chuyện.
 - Bài **chưa đạt**: không đánh dấu, để ẩn.
 - Lượt 7h50 **không bao giờ** chạy `publish`. **Không bao giờ** dùng cờ `--anh-da-duyet` trong lịch tự động; cờ này chỉ dành cho phiên trò chuyện khi chính anh vừa bảo đăng một bài cụ thể.
 
@@ -115,7 +119,7 @@ ID của Google Sheet nằm trong lời nhắc của lịch tự động (không
    `Ngày viết | Id Sapo | Tiêu đề | Đường dẫn | Từ khóa chính | Dạng nội dung | Nhóm | Người chấm | Điểm | Lỗi nghiêm trọng | Góp ý chính | Kết luận | Anh duyệt | Trạng thái | Link bài | Giờ đăng | Tóm tắt`
 2. Thêm **một hàng mới** ngay dưới hàng cuối có dữ liệu (đọc cột A để tìm hàng trống đầu tiên). Không sửa hàng của ngày khác, không xóa gì.
    - Ngày viết dạng `dd/mm/yyyy`; Id Sapo là số id; Đường dẫn là `/alias`.
-   - Kết luận: `Đạt` hoặc `Chưa đạt`. Anh duyệt: **để trống** (anh ghi `Không đăng` nếu muốn chặn). Trạng thái: `Chờ đăng 14h` nếu đạt, `Để ẩn – chưa đạt` nếu chưa đạt.
+   - Kết luận: `Đạt` hoặc `Chưa đạt`. Anh duyệt: **để trống** (anh ghi `Không đăng` nếu muốn chặn). Trạng thái: `Chờ đăng 14h` nếu đạt, `Để ẩn – chưa đạt` nếu chưa đạt, `Để ẩn – chờ anh duyệt` nếu dòng kế hoạch ghi như vậy.
    - Lỗi nghiêm trọng, Góp ý chính: tóm tắt ngắn, mỗi ý một dòng, không quá 500 ký tự mỗi ô. Tóm tắt: 2–3 câu nói bài viết gì.
 3. Đọc lại hàng vừa ghi để chắc dữ liệu đúng ô.
 4. Nếu phiên không có connector Google Sheets: bỏ qua bước này và ghi rõ trong báo cáo "chưa ghi được vào sheet (chưa có kết nối Google Sheets)".
@@ -125,7 +129,7 @@ ID của Google Sheet nằm trong lời nhắc của lịch tự động (không
 Viết tiếng Việt, ngắn, xưng "em", gọi "anh". Đây là nội dung anh nhận trên điện thoại:
 - Tiêu đề bài, từ khóa chính, dạng nội dung, nhóm chủ đề.
 - Điểm duyệt, người chấm (ChatGPT model gì, hoặc "Claude kiểm tra + phản biện"), lỗi đã sửa.
-- Trạng thái: **chờ đăng khoảng 14h** (muốn chặn thì ghi "Không đăng" vào cột "Anh duyệt" trong sheet trước giờ đó), hoặc **để ẩn vì chưa đạt** kèm lý do.
+- Trạng thái: **chờ đăng khoảng 14h** (muốn chặn thì ghi "Không đăng" vào cột "Anh duyệt" trong sheet trước giờ đó), **để ẩn vì chưa đạt** kèm lý do, hoặc **để ẩn chờ anh duyệt** (anh nhắn "đăng bài <id>" khi đồng ý).
 - Số ảnh, nguồn ảnh. Các link nội bộ đã gắn. Đã ghi sheet hay chưa.
 - Điều cần anh lưu ý; chủ đề dự kiến cho lần chạy sau; kế hoạch còn dưới 5 chủ đề thì nói rõ.
 
