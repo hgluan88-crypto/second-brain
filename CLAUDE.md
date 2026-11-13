@@ -13,6 +13,7 @@ Claude đọc file này trước khi trả lời bất cứ câu hỏi nào.
 - Kênh bán: cửa hàng, Facebook, TikTok, Shopee, website, Zalo, hotline.
 - Thế mạnh và trọng tâm phát triển: khách hàng doanh nghiệp (B2B).
 - Định vị: Vua Bảo Hộ là thương hiệu chuyên phân phối các dòng sản phẩm chính hãng. Yamako (áo điều hòa, áo sưởi) là một hãng được phân phối tại Vua Bảo Hộ; web thương hiệu yamako.vn cũng là của anh Luận.
+- Yamako là thương hiệu độc lập, **không thuộc chuỗi cửa hàng Vua Bảo Hộ** (anh xác nhận 13/11/2026). Không viết Yamako là cửa hàng, chi nhánh hay thương hiệu con của Vua Bảo Hộ, và ngược lại. Quan hệ đúng: Vua Bảo Hộ là nhà phân phối Yamako. Bài trên yamako.vn dùng thông tin liên hệ riêng của Yamako (theo chân trang yamako.vn), không dùng hotline và cửa hàng Vua Bảo Hộ làm liên hệ của hãng; Vua Bảo Hộ chỉ xuất hiện như một điểm bán.
 - Nhận in logo lên áo theo yêu cầu của khách (đồng phục, áo điều hòa).
 - Năm 2026 lần đầu lập vị trí cửa hàng trưởng chính thức; đang cơ cấu lại lương và quy trình.
 - Thang bậc nhân viên: Cấp độ 1 → Cấp độ 2 → Cấp độ 3 → CHT tập sự → CHT chuẩn.

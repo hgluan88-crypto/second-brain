@@ -55,6 +55,8 @@ Các con số mục tiêu trên sẽ chốt lại ở **tuần 2**, khi có số
 
 Anh Luận xác nhận ngày 17/10/2026: yamako.vn là web của anh. Vua Bảo Hộ là thương hiệu chuyên phân phối các dòng sản phẩm chính hãng, Yamako là một hãng uy tín được phân phối tại Vua Bảo Hộ.
 
+Anh xác nhận thêm ngày 13/11/2026: Yamako là thương hiệu độc lập, không thuộc chuỗi cửa hàng Vua Bảo Hộ. Hai bên chỉ có quan hệ hãng và nhà phân phối. yamako.vn dùng thông tin liên hệ riêng của Yamako; mô tả trang chủ yamako.vn hiện ghi "thuộc chuỗi cửa hàng bảo hộ của Vua Bảo Hộ" là sai, cần sửa.
+
 Hai web cùng chủ thì nên **chia vai, không tranh nhau**. Nếu cả hai cùng lên trang 1 cho "áo điều hòa" thì càng tốt (chiếm hai chỗ), miễn là nội dung không chép của nhau.
 
 | | yamako.vn (web thương hiệu) | vuabaoho.com (nhà phân phối) |
