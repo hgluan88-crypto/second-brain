@@ -9,7 +9,7 @@ Cập nhật: 17/10/2026. Lịch tự động đọc file này mỗi lần viế
    2. **Đồ bảo hộ lao động** đủ loại (quần áo, giày, mũ, găng tay, ủng…) cho doanh nghiệp.
    3. **Giày bảo hộ** (có cửa hàng thật để thử).
    4. **Đồ bảo hộ tại địa phương**: Nam Định (nay thuộc tỉnh Ninh Bình), Nghệ An, và các tỉnh sẽ mở cửa hàng.
-2. Định vị: Vua Bảo Hộ là nhà phân phối các dòng đồ bảo hộ chính hãng; Yamako là một thương hiệu Vua Bảo Hộ phân phối. yamako.vn là web thương hiệu Yamako, cùng chủ. Trên vuabaoho.com, lời kêu gọi luôn là hotline và cửa hàng Vua Bảo Hộ; chỉ link sang yamako.vn khi nói về thông tin hãng (bảo hành, thông số gốc), không viết "mua tại yamako.vn". Chỉ ghi "nhà phân phối chính hãng / đại lý ủy quyền" cho hãng đã được xác nhận (hiện là Yamako).
+2. Định vị: Vua Bảo Hộ là nhà phân phối các dòng đồ bảo hộ chính hãng; Yamako là một thương hiệu Vua Bảo Hộ phân phối. Yamako là thương hiệu độc lập, không thuộc chuỗi cửa hàng Vua Bảo Hộ: không viết Yamako là cửa hàng, chi nhánh hay thương hiệu con của Vua Bảo Hộ. yamako.vn là web thương hiệu Yamako, cùng chủ. Trên vuabaoho.com, lời kêu gọi luôn là hotline và cửa hàng Vua Bảo Hộ; chỉ link sang yamako.vn khi nói về thông tin hãng (bảo hành, thông số gốc), không viết "mua tại yamako.vn". Chỉ ghi "nhà phân phối chính hãng / đại lý ủy quyền" cho hãng đã được xác nhận (hiện là Yamako).
 3. Mỗi bài dẫn người đọc tới một hành động: gọi hotline 1900.3385, ghé cửa hàng Nam Định hoặc Nghệ An, gửi yêu cầu báo giá, hoặc xem sản phẩm đang bán trên web.
 
 ## Hiện trạng (tháng 10/2026)

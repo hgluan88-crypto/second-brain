@@ -26,6 +26,7 @@ Dùng chung cho ChatGPT duyệt (script `seo/scripts/openai_review.py`) và cho 
 - Liên kết tới bài hoặc sản phẩm đang ẩn, hoặc link hỏng.
 - Trùng chủ đề hoặc từ khóa chính với một bài cũ trên web.
 - Chê bai, so sánh hạ thấp đối thủ cụ thể.
+- Viết Yamako là cửa hàng, chi nhánh, thương hiệu con của Vua Bảo Hộ hoặc thuộc chuỗi Vua Bảo Hộ (Yamako là thương hiệu độc lập; Vua Bảo Hộ là nhà phân phối).
 - Còn sót ghi chú nội bộ, chỗ trống kiểu [cần bổ sung], hoặc lời nói với người duyệt.
 
 ## Bài dạng "Top" và so sánh
