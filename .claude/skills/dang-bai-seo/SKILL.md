@@ -109,7 +109,7 @@ Chạy `sapo.py create-article $W/spec.json` (tạo ẩn, tác giả "Vua Bảo 
 - Bài **đạt** duyệt: `sapo.py mark-ready <id>`. Bài vẫn ẩn; lượt đăng khoảng 14h (Bước 10) sẽ đăng nếu anh không chặn.
 - Dòng kế hoạch ghi **Để ẩn chờ anh duyệt** (ví dụ bài pháp lý): dù đạt cũng **không** `mark-ready`; để ẩn, chờ anh bảo đăng trong phiên trò chuyện.
 - Bài **chưa đạt**: không đánh dấu, để ẩn.
-- Lượt 7h50 **không bao giờ** chạy `publish`. **Không bao giờ** dùng cờ `--anh-da-duyet` trong lịch tự động; cờ này chỉ dành cho phiên trò chuyện khi chính anh vừa bảo đăng một bài cụ thể.
+- Lượt 7h50 **không bao giờ** chạy `publish`. Công cụ cũng tự chặn: không có `--anh-da-duyet` thì `publish` chỉ đăng bài có tag `cho-dang` và tạo từ 2 giờ trước; bị chặn thì để nguyên, không tìm cách khác. **Không bao giờ** dùng cờ `--anh-da-duyet` trong lịch tự động; cờ này chỉ dành cho phiên trò chuyện khi chính anh vừa bảo đăng một bài cụ thể.
 
 ## Bước 8. Ghi vào Google Sheet theo dõi
 

@@ -286,12 +286,32 @@ def cmd_update_article(a):
                      ensure_ascii=False))
 
 
+MIN_AGE_HOURS = 2  # bài phải tạo ít nhất 2 giờ trước khi lịch được đăng (lượt 7h50 không thể đăng ngay)
+
+
+def _publish_guard(art, now):
+    """Lý do từ chối đăng (chuỗi) hoặc None. Chỉ áp dụng khi không có cờ --anh-da-duyet."""
+    if READY_TAG not in _tags(art):
+        return (f"bài chưa có tag {READY_TAG} (chưa đạt duyệt, hoặc đang để ẩn chờ anh duyệt). "
+                "Lịch tự động chỉ đăng bài đã đánh dấu chờ đăng.")
+    created = datetime.datetime.fromisoformat((art.get("created_on") or "").replace("Z", "+00:00"))
+    age_h = (now - created).total_seconds() / 3600
+    if age_h < MIN_AGE_HOURS:
+        return (f"bài mới tạo {age_h * 60:.0f} phút trước (cần ít nhất {MIN_AGE_HOURS} giờ). "
+                "Lượt 7h50 không đăng bài; lượt khoảng 14h sẽ đăng nếu anh không chặn.")
+    return None
+
+
 def cmd_publish(a):
     if not a.anh_da_duyet:
         n = count_auto()
         if n <= PHASE1_LIMIT:
             sys.exit(f"KHÔNG ĐĂNG: mới có {n} bài tự động (giai đoạn {PHASE1_LIMIT} bài đầu). "
                      "Bài phải để ẩn chờ anh Luận duyệt. Không tìm cách khác để hiện bài.")
+        art = api("GET", f"blogs/{BLOG_ID}/articles/{a.id}.json")["article"]
+        why = _publish_guard(art, datetime.datetime.now(datetime.timezone.utc))
+        if why:
+            sys.exit(f"KHÔNG ĐĂNG id={a.id}: {why} Không tìm cách khác để hiện bài.")
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     res = api("PUT", f"blogs/{BLOG_ID}/articles/{a.id}.json",
               {"article": {"id": a.id, "published_on": now}})  # trường "published" không có tác dụng
@@ -497,7 +517,7 @@ def main():
     s.add_argument("spec")
     s.set_defaults(f=cmd_update_article)
 
-    s = sp.add_parser("publish", help=f"hiện bài lên web; tự từ chối khi chưa quá {PHASE1_LIMIT} bài tự động")
+    s = sp.add_parser("publish", help=f"hiện bài lên web; không có --anh-da-duyet thì chỉ đăng bài có tag {READY_TAG} và tạo từ {MIN_AGE_HOURS} giờ trước")
     s.add_argument("id", type=int)
     s.add_argument("--anh-da-duyet", action="store_true",
                    help="chỉ dùng khi chính anh Luận vừa bảo đăng bài này; lịch tự động không bao giờ dùng")
