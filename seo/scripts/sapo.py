@@ -290,7 +290,7 @@ MIN_AGE_HOURS = 2  # bài phải tạo ít nhất 2 giờ trước khi lịch đ
 
 
 def _publish_guard(art, now):
-    """Lý do từ chối đăng (chuỗi) hoặc None. Chỉ áp dụng khi không có cờ --anh-da-duyet."""
+    """Lý do từ chối đăng (chuỗi) hoặc None. Lịch tự động luôn qua bước này."""
     if READY_TAG not in _tags(art):
         return (f"bài chưa có tag {READY_TAG} (chưa đạt duyệt, hoặc đang để ẩn chờ anh duyệt). "
                 "Lịch tự động chỉ đăng bài đã đánh dấu chờ đăng.")
@@ -303,7 +303,7 @@ def _publish_guard(art, now):
 
 
 def cmd_publish(a):
-    if not a.anh_da_duyet:
+    if not a.xac_nhan_chu_shop:
         n = count_auto()
         if n <= PHASE1_LIMIT:
             sys.exit(f"KHÔNG ĐĂNG: mới có {n} bài tự động (giai đoạn {PHASE1_LIMIT} bài đầu). "
@@ -517,10 +517,9 @@ def main():
     s.add_argument("spec")
     s.set_defaults(f=cmd_update_article)
 
-    s = sp.add_parser("publish", help=f"hiện bài lên web; không có --anh-da-duyet thì chỉ đăng bài có tag {READY_TAG} và tạo từ {MIN_AGE_HOURS} giờ trước")
+    s = sp.add_parser("publish", help=f"hiện bài lên web; chỉ đăng bài có tag {READY_TAG} và tạo từ {MIN_AGE_HOURS} giờ trước")
     s.add_argument("id", type=int)
-    s.add_argument("--anh-da-duyet", action="store_true",
-                   help="chỉ dùng khi chính anh Luận vừa bảo đăng bài này; lịch tự động không bao giờ dùng")
+    s.add_argument("--xac-nhan-chu-shop", action="store_true", help=argparse.SUPPRESS)  # chỉ dùng trong phiên trò chuyện khi chính anh Luận bảo đăng
     s.set_defaults(f=cmd_publish)
 
     s = sp.add_parser("mark-ready", help=f"đánh dấu bài ẩn đã đạt duyệt, chờ lượt đăng 14h (tag {READY_TAG})")

@@ -5,9 +5,9 @@ description: Viết và đăng một bài blog chuẩn SEO lên vuabaoho.com (Sa
 
 # Đăng một bài SEO lên vuabaoho.com
 
-Quy trình có **hai lượt mỗi ngày**:
-- **Lượt 7h50** (Bước 0–9): viết đúng một bài, duyệt, tạo bài ẩn, đánh dấu chờ đăng nếu đạt, ghi vào Google Sheet, báo cáo. Không đăng.
-- **Lượt khoảng 14h** (Bước 10–11): đăng các bài đã đạt, trừ bài anh ghi "Không đăng" trong sheet; cập nhật sheet; báo cáo.
+Quy trình có **hai lượt mỗi ngày**, do hai lịch riêng chạy:
+- **Lượt 7h50** (file này, Bước 0–9): viết đúng một bài, duyệt, tạo bài ẩn, đánh dấu chờ đăng nếu đạt, ghi vào Google Sheet, báo cáo rồi **dừng**. Lượt này không đăng bài nào.
+- **Lượt khoảng 14h**: làm theo file `luot-dang-14h.md` cùng thư mục. Lượt 7h50 không đọc, không làm theo file đó.
 
 Chất lượng hơn số lượng. Làm lần lượt từng bước. Không bỏ bước duyệt và bước kiểm tra.
 
@@ -106,10 +106,10 @@ Chạy `sapo.py create-article $W/spec.json` (tạo ẩn, tác giả "Vua Bảo 
 
 ## Bước 7. Đánh dấu chờ đăng (lượt 7h50 KHÔNG đăng bài)
 
-- Bài **đạt** duyệt: `sapo.py mark-ready <id>`. Bài vẫn ẩn; lượt đăng khoảng 14h (Bước 10) sẽ đăng nếu anh không chặn.
+- Bài **đạt** duyệt: `sapo.py mark-ready <id>`. Bài vẫn ẩn; lượt đăng khoảng 14h (lịch riêng) sẽ đăng nếu anh không chặn.
 - Dòng kế hoạch ghi **Để ẩn chờ anh duyệt** (ví dụ bài pháp lý): dù đạt cũng **không** `mark-ready`; để ẩn, chờ anh bảo đăng trong phiên trò chuyện.
 - Bài **chưa đạt**: không đánh dấu, để ẩn.
-- Lượt 7h50 **không bao giờ** chạy `publish`. Công cụ cũng tự chặn: không có `--anh-da-duyet` thì `publish` chỉ đăng bài có tag `cho-dang` và tạo từ 2 giờ trước; bị chặn thì để nguyên, không tìm cách khác. **Không bao giờ** dùng cờ `--anh-da-duyet` trong lịch tự động; cờ này chỉ dành cho phiên trò chuyện khi chính anh vừa bảo đăng một bài cụ thể.
+- Lượt 7h50 **không bao giờ** đăng bài: không chạy `publish`, không gọi API Sapo trực tiếp (curl, python) để đặt `published_on`. Công cụ cũng tự chặn đăng bài vừa tạo; bị chặn thì để nguyên, không tìm cách khác.
 
 ## Bước 8. Ghi vào Google Sheet theo dõi
 
@@ -124,7 +124,7 @@ ID của Google Sheet nằm trong lời nhắc của lịch tự động (không
 3. Đọc lại hàng vừa ghi để chắc dữ liệu đúng ô.
 4. Nếu phiên không có connector Google Sheets: bỏ qua bước này và ghi rõ trong báo cáo "chưa ghi được vào sheet (chưa có kết nối Google Sheets)".
 
-## Bước 9. Báo cáo lượt 7h50 (tin nhắn cuối cùng của phiên)
+## Bước 9. Báo cáo lượt 7h50 (tin nhắn cuối cùng của phiên; xong bước này thì DỪNG)
 
 Viết tiếng Việt, ngắn, xưng "em", gọi "anh". Đây là nội dung anh nhận trên điện thoại:
 - Tiêu đề bài, từ khóa chính, dạng nội dung, nhóm chủ đề.
@@ -133,26 +133,11 @@ Viết tiếng Việt, ngắn, xưng "em", gọi "anh". Đây là nội dung anh
 - Số ảnh, nguồn ảnh. Các link nội bộ đã gắn. Đã ghi sheet hay chưa.
 - Điều cần anh lưu ý; chủ đề dự kiến cho lần chạy sau; kế hoạch còn dưới 5 chủ đề thì nói rõ.
 
-## Bước 10. Lượt đăng khoảng 14h (lịch riêng, không viết bài mới)
-
-1. `sapo.py pending` để lấy danh sách bài ẩn đang chờ đăng (tag `cho-dang`).
-2. Với từng bài, tìm hàng có cùng Id Sapo trong sheet (Bước 8):
-   - Cột "Anh duyệt" có chữ `Không đăng` (không phân biệt hoa thường, có hoặc không dấu): `sapo.py mark-ready <id> --bo`, để ẩn, ghi Trạng thái `Để ẩn – anh không duyệt`.
-   - Ngược lại: `sapo.py publish <id>`, rồi kiểm tra như Bước 11. Ổn thì ghi Trạng thái `Đã đăng`, Link bài `https://vuabaoho.com/<alias>`, Giờ đăng `hh:mm dd/mm/yyyy`.
-   - Không thấy hàng của bài trong sheet thì vẫn đăng (anh đã chọn "im lặng là đồng ý") và ghi chú trong báo cáo.
-3. Nếu phiên không có connector Google Sheets: vẫn đăng các bài đang chờ, báo rõ là không đọc được cột "Anh duyệt".
-4. Báo cáo ngắn: bài nào đã đăng (link), bài nào anh chặn, lỗi nếu có. Không có bài chờ thì báo một dòng.
-
-## Bước 11. Kiểm tra sau khi đăng
-
-- `sapo.py check-live <đường dẫn>`. Cần có: `title`, `meta_description` đúng, `h1` đúng, `schema` có `FAQPage`, `json_lo_ra_ngoai` = false, `anh_loi` rỗng, `anh_khong_thay_tren_trang` rỗng. Mục `schema` có "LỖI JSON" ở NewsArticle là lỗi sẵn có của giao diện, không phải lỗi của bài.
-- Có lỗi thì sửa bằng `sapo.py update-article <id> <spec.json>`. Không sửa được ngay thì `sapo.py hide <id>`, ghi Trạng thái `Đã ẩn lại – lỗi sau khi đăng` và báo cáo.
-
 ## Không được làm
 
 - Xóa hoặc sửa bài cũ không do quy trình này tạo ra; sửa hoặc ẩn sản phẩm; đổi giao diện, cài đặt cửa hàng, danh mục.
 - Xóa ảnh trong kho ảnh (bài cũ đang dùng).
-- Viết quá một bài mỗi lượt 7h50; đăng bài trong lượt 7h50.
+- Viết quá một bài mỗi lượt 7h50; đăng bài trong lượt 7h50 bằng bất kỳ cách nào (lệnh `publish`, gọi API trực tiếp, sửa `published_on`).
 - Sửa, xóa hàng của ngày khác trong Google Sheet; đổi tên hay xóa tab.
 - Ghi mã API, mật khẩu, ID Google Sheet vào repo, bài viết hoặc báo cáo.
 - Commit hay push thay đổi lên repo (repo đang để public; kế hoạch do anh duyệt).
